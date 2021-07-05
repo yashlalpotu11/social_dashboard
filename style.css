@@ -84,7 +84,7 @@ body.light{
     border-radius: 34px;
 }
   
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 18px;
@@ -95,3 +95,210 @@ body.light{
     border-radius: 34px;
     transition: 0.4s;
 }
+#toggler:checked + .slider{
+    background-color: #aeb3cb;
+}
+#toggler:checked + .slider::before{
+    transform: translate(26px);
+    background-color: #fff;
+}
+@media all and (min-width : 1000px){
+    .slider:hover{
+        filter: brightness(150%);
+    }
+    #toggler:checked + .slider:hover{
+        background: linear-gradient(
+        to right,
+      #378fe6,
+      #00a9f0,
+      #00bfde,
+      #00cfb6,
+      #3eda82
+    );
+    filter: none;
+  }
+}
+
+/*Grid*/
+#grids-container{
+    margin: 10% 0 5%;
+    padding: 0 9%;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width : 1100px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width : 550px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARDS */
+
+.card {
+    text-align: center;
+    margin: 4%;
+    background-color: #252a41;
+    border-radius: 5px;
+    border: none;
+    padding: 11.5% 0;
+    cursor: pointer;
+    transition: filter 0.6s;
+  }
+  
+  .card:hover {
+    filter: brightness(130%);
+  }
+  
+  .light .card {
+    background-color: #f0f2fa;
+  }
+  
+  .light .card:hover {
+    filter: brightness(90%);
+  }
+  
+  /* TOP GRID */
+  
+  .facebook {
+    border-top: 4px solid #00bfff;
+  }
+  
+  .twitter {
+    border-top: 4px solid #1ca0f2;
+  }
+  
+  .instagram {
+    background: linear-gradient(
+          to right,
+          #fdc468,
+          #ffa263,
+          #ff806c,
+          #f9607f,
+          #df4996
+        )
+        top/100% 4px no-repeat,
+      #252a41;
+  }
+  
+  .youtube {
+    border-top: 4px solid #c4032a;
+  }
+  
+  .username {
+    margin-left: 8px;
+    font-size: 13px;
+  }
+  
+  .followers-count {
+    font-size: 3.5rem;
+    line-height: 0;
+    margin-top: 50px;
+  }
+  
+  .followers {
+    line-height: 0;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    font-size: 13px;
+  }
+  
+  /* OVERVIEW GRID */
+  
+  .overview-heading {
+    font-size: 1.5rem;
+    margin: 4% 0 2%;
+    padding-left: 1%;
+  }
+  
+  .light .overview-heading {
+    color: #63687e;
+  }
+  
+  .card-overview {
+    padding: 10% 10% 5%;
+  }
+  
+  .overview-count-row {
+    padding: 50px 0 10px;
+  }
+  
+  .overview-count {
+    font-size: 1.9rem;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .overview-change {
+    align-self: flex-end;
+  }
+  
+  /* SMALL SCREENS */
+  
+  @media all and (max-width: 1100px) {
+    #header {
+      display: block;
+      padding: 25px 6% 90px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+  
+    .seperator {
+      display: block;
+      height: 0.5px;
+      background-color: #8b97c6;
+      border: none;
+      margin: 25px auto;
+    }
+  
+    .light .seperator {
+      background-color: #1e202a;
+    }
+  
+    #header .row {
+      justify-content: space-between;
+    }
+  
+    #grids-container {
+      margin-top: 190px;
+      padding: 0 2.5%;
+    }
+  
+    .overview-heading {
+      margin: 6% 0 3%;
+      padding-left: 3.5%;
+    }
+  
+    .card {
+      margin: 3.5%;
+      padding: 6% 0;
+    }
+  
+    .card-overview {
+      padding: 6% 6% 3%;
+    }
+  }
+  
+  /* RESPONDING TO LINE BREAK ON SMALLER MOBILES */
+  
+  @media all and (max-width: 345px) {
+    .main-heading {
+      line-height: 1.2;
+    }
+  
+    #header {
+      padding-bottom: 160px;
+    }
+  
+    #grids-container {
+      margin-top: 250px;
+    }
+  }
